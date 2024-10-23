@@ -11,15 +11,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme:ThemeData.dark(),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           elevation: 0,
-          title: Text("Whatsapp"),
+          title: const Text("Whatsapp"),
           actions: [
-            IconButton(onPressed: () {}, icon: Icon(Icons.camera_alt_outlined)),
-            IconButton(onPressed: () {}, icon: Icon(Icons.search)),
-            IconButton(onPressed: () {}, icon: Icon(Icons.list_sharp)),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.camera_alt_outlined)),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.list_sharp)),
           ],
           //backgroundColor: Colors.deepPurple,
         ),
@@ -53,20 +54,21 @@ class MyApp extends StatelessWidget {
                 color: Colors.grey,
               ),
             ),
-                Padding(
+            Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 height: 100,
                 color: Colors.grey,
               ),
             ),
-                Padding(
+            Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 height: 100,
                 color: Colors.grey,
               ),
-            ),    Padding(
+            ),
+            Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 height: 100,
@@ -78,7 +80,7 @@ class MyApp extends StatelessWidget {
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           elevation: 0,
-          items: [
+          items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.message_rounded),
               label: "Chats",
@@ -100,10 +102,10 @@ class MyApp extends StatelessWidget {
         ),
       ),
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      //theme: ThemeData(
+       // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+       // useMaterial3: true,
+     // ),
       //home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
